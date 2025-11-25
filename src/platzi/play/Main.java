@@ -2,28 +2,31 @@ package platzi.play;
 
 import platzi.play.content.Movie;
 import platzi.play.platform.User;
+import platzi.play.util.ScannerUtils;
 
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    public static final  String VERSION = "1.0.0";
+    public static final  String  PLATFORM_NAME = "Platzi Play";
     public static void main(String[] args) {
         Movie movie = new Movie();
-       /* System.out.println("Platzi Play! hello and welcome!");
+       System.out.println( PLATFORM_NAME+" v"+ VERSION + " hello and welcome!");
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What is your name?");
-        String name = scanner.nextLine();
-        System.out.println("Hello "+ name+ ", this is platzi play");
-        System.out.println("How old are you?");
-        int age = scanner.nextInt();
-        System.out.println(name+ " you can watch +" +age);*/
+        String name = ScannerUtils.captureText("Movie name");
+        String genre = ScannerUtils.captureText("Genre");
+        int duration = ScannerUtils.getNumber("Movie Duration minutes");
+        int year = ScannerUtils.getNumber("Year");
+        double review = ScannerUtils.getDouble("Movie review");
 
-        movie.title = "lord of the rings";
-        movie.age = 2001;
-        movie.genre = "fantasy";
-        movie.reviewIt(4.7);
+
+        movie.title = name;
+        movie.age = year;
+        movie.duration = duration;
+        movie.genre = genre;
+        movie.reviewIt(review);
 
         System.out.println(movie.getTechInfo());
         User user = new User();

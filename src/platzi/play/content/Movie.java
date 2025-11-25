@@ -3,7 +3,7 @@ package platzi.play.content;
 public class Movie {
     public String title;
     public String description;
-    public String duration;
+    public int duration;
     public String genre;
     public int age;
     public double review;
