@@ -12,8 +12,8 @@ public class Main {
     public static final  String VERSION = "1.0.0";
     public static final  String  PLATFORM_NAME = "Platzi Play";
     public static void main(String[] args) {
-        Movie movie = new Movie();
-       System.out.println( PLATFORM_NAME+" v"+ VERSION + " hello and welcome!");
+
+        System.out.println( PLATFORM_NAME+" v"+ VERSION + " hello and welcome!");
 
         String name = ScannerUtils.captureText("Movie name");
         String genre = ScannerUtils.captureText("Genre");
@@ -22,10 +22,8 @@ public class Main {
         double review = ScannerUtils.getDouble("Movie review");
 
 
-        movie.title = name;
+        Movie movie = new Movie(name, duration, genre);
         movie.age = year;
-        movie.duration = duration;
-        movie.genre = genre;
         movie.reviewIt(review);
 
         System.out.println(movie.getTechInfo());

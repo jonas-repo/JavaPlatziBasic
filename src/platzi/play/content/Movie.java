@@ -9,6 +9,12 @@ public class Movie {
     public double review;
     public boolean available;
 
+    public Movie(String title, int duration, String genre){
+        this.title = title;
+        this.duration = duration;
+        this.genre = genre;
+    }
+
     public void play(){
         System.out.println("Playing " + title);
     }
