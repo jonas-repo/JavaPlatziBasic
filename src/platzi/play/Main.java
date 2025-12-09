@@ -9,6 +9,14 @@ import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/**
+ * Console application entry point for the Platzi Play demo.
+ *
+ * <p>The CLI offers a small interactive menu that allows adding movies,
+ * listing all titles, searching by title, deleting items and exiting the
+ * application. It demonstrates usage of {@link Platform}, {@link Movie}
+ * and {@link ScannerUtils} helper methods.</p>
+ */
 public class Main {
     public static final  String VERSION = "1.0.0";
     public static final  String  PLATFORM_NAME = "Platzi Play";
@@ -48,7 +56,9 @@ public class Main {
                     platform.add(movie);
                     System.out.println(movie.getTechInfo());
                 }
-                case SHOW_ALL -> {}
+                case SHOW_ALL -> {
+                    platform.showTitles();
+                }
                 case SEARCH ->  {
                     String nameMovie = ScannerUtils.captureText("Movie name:");
                     Movie movie = platform.searchByTitle(nameMovie);
@@ -81,6 +91,11 @@ public class Main {
 
     }
 
+    /**
+     * Preload a couple of example movies into the platform for demo purposes.
+     *
+     * @param platform the Platform to populate
+     */
     public static void loadMovie(Platform platform){
         platform.add(new Movie("lola",30,"anime"));
         platform.add(new Movie("trailera",30,"anime"));
