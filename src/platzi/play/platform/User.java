@@ -7,6 +7,6 @@ public class User {
     public String email;
 
     public void watch(Movie movie){
-        System.out.println(name+" is Playing "+movie.title);
+        System.out.println(name+" is Playing "+movie.getTitle());
     }
 }

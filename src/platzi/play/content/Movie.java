@@ -1,13 +1,13 @@
 package platzi.play.content;
 
 public class Movie {
-    public String title;
-    public String description;
-    public int duration;
-    public String genre;
-    public int age;
-    public double review;
-    public boolean available;
+    private String title;
+    private String description;
+    private int duration;
+    private String genre;
+    private int age;
+    private double review;
+    private boolean available;
 
     public Movie(String title, int duration, String genre){
         this.title = title;
@@ -34,4 +34,49 @@ public class Movie {
     public boolean isPopular(){
         return review >=4;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getReview() {
+        return review;
+    }
+
 }
