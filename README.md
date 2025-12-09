@@ -56,10 +56,4 @@ You can also compile from your IDE which will handle classpaths automatically.
 - The project uses package-private and public fields deliberately to keep the
   code short for learning purposes.
 
----
-
-If you want, I can also:
-- Add unit tests (JUnit) for key behaviors (search, add, remove, review logic).
-- Harden input handling in `ScannerUtils` to avoid exceptions on bad input.
-- Add a build script (Maven/Gradle) and IDE run configurations.
 
